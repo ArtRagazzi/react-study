@@ -4,40 +4,39 @@ import './styles.css';
 function App() {
   const [nutri, setNutri] = useState([])
 
-  useEffect(()=>{
-
-    function loadApi(){
+  useEffect(() => {
+    function loadApi() {
       let url = 'https://sujeitoprogramador.com/rn-api/?api=posts';
       fetch(url)
-      .then((r)=>r.json)
-      .then((json)=>{
-        setNutri(json)
-      })
+        .then((r) => r.json())
+        .then((json) => {
+          setNutri(json)
+        })
     }
 
     loadApi()
-  },[])
+  }, [])
 
   return (
-   
-      <div className='container'>
 
-        <header>
-          <strong>React Nutri</strong>
-        </header>
+    <div className='container'>
 
-        {nutri.map((cadaItem)=>{
-          return(
-            <article key={cadaItem.id} className='post'>
-              <strong className='titulo'>{cadaItem.titulo}</strong>
-              <img src={cadaItem.capa} alt='Imagem' className='capa'></img>
-              <p className='subtitulo'>{cadaItem.subtitulo}</p>
-              <a className='botao'>Acessar</a>
+      <header>
+        <strong>React Nutri</strong>
+      </header>
 
-            </article>
-          )
-        })}
-      </div>
+      {nutri.map((cadaItem) => {
+        return (
+          <article key={cadaItem.id} className='post'>
+            <strong className='titulo'>{cadaItem.titulo}</strong>
+            <img src={cadaItem.capa} alt='Imagem' className='capa'></img>
+            <p className='subtitulo'>{cadaItem.subtitulo}</p>
+            <h2>Categoria: {cadaItem.categoria}</h2>
+            <a className='botao'>Acessar</a>
+          </article>
+        )
+      })}
+    </div>
 
   )
 }

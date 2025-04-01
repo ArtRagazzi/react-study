@@ -1,0 +1,21 @@
+header{
+    width: 100%;
+    height: 100px;
+    background-color: gray;
+    color: white;
+    font-size: large;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+header a{
+    color: white;
+    font-size: 22px;
+
+}
+
+header a +a{
+    margin-left: 10px;
+}
