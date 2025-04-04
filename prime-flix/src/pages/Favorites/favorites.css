@@ -1,0 +1,59 @@
+.my-movies{
+    margin-top: 24px;
+
+}
+
+.my-movies h1{
+    margin-bottom: 14px;
+
+}
+.my-movies span{
+    font-size: 18px;
+}
+
+.my-movies ul{
+    width: 720px;
+}
+
+.my-movies ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.my-movies div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-movies div a{
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-right: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: green;
+}
+
+.my-movies div button{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
+    margin-right: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: red;
+}

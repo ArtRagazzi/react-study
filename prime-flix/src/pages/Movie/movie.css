@@ -1,0 +1,76 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.movie-info {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    padding: 0 8px;
+
+}
+
+.movie-info h1 {
+    margin: 14px 0;
+
+}
+
+.movie-info img {
+    border-radius: 10px;
+    width: 900px;
+    max-width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+
+}
+
+.movie-info h3 {
+    margin-top: 14px;
+
+}
+
+.movie-info span {
+    margin: 8px 0;
+
+}
+
+.button-container {
+    gap: 25px;
+    display: flex;
+    margin-top: 15px;
+}
+
+.button-container button {
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.button-container a {
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+   
+}
+
+.button-container button:hover {
+    background-color: red;
+    color: white;
+}

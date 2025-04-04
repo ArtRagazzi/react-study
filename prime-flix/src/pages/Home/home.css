@@ -1,0 +1,54 @@
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+}
+
+
+.movie-list{
+    max-width: 800px;
+    margin: 14px auto;
+
+}
+
+.movie-list article{
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+
+}
+
+.movie-list strong{
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 22px;
+    display: block;
+}
+
+
+
+.movie-list img{
+    object-fit: cover;
+    width: 900px;
+    max-width: 100%;
+    display: block;
+    max-height: 340px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.movie-list a{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 24px;
+    background-color: red;
+    color: white;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
