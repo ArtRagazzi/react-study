@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+import { FormEvent, use, useEffect, useState } from 'react'
 import { BiSearch } from 'react-icons/bi'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Home() {
 
@@ -21,6 +21,8 @@ export default function Home() {
     }
 
     const [coins, setCoins] = useState<CoinProps[]>([])
+    const [inputValue, setInputValue] = useState("");
+    const navigate = useNavigate();
 
     //https://coinlib.io/api/v1/coinlist?key=8fbc382da8cbd0c9&pref=BRL&page=1&order=volume_desc
     useEffect(()=>{
@@ -57,13 +59,24 @@ export default function Home() {
 
 
 
+    function handleSearch(e:FormEvent){
+        e.preventDefault
+        
+        if(inputValue === ""){
+            return ;
+        }
+        navigate(`/detail/${inputValue}`)
+
+    }
 
     return (
         <main className='flex flex-col justify-center m-5'>
-            <form className='flex w-full gap-4'>
+            <form className='flex w-full gap-4' onSubmit={handleSearch}>
                 <input
                     type="text"
                     className='w-full bg-white rounded-md h-[44px] px-4 py-2 text-black'
+                    value={inputValue}
+                    onChange={(e)=>setInputValue(e.target.value)}
                     placeholder="Digite o símbolo da moeda: BTC..." />
                 <button
                     type="submit"
