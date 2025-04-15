@@ -1,4 +1,4 @@
-import { FormEvent, use, useEffect, useState } from 'react'
+import { FormEvent, useEffect, useState } from 'react'
 import { BiSearch } from 'react-icons/bi'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -60,7 +60,7 @@ export default function Home() {
 
 
     function handleSearch(e:FormEvent){
-        e.preventDefault
+        e.preventDefault()
         
         if(inputValue === ""){
             return ;
@@ -76,7 +76,7 @@ export default function Home() {
                     type="text"
                     className='w-full bg-white rounded-md h-[44px] px-4 py-2 text-black'
                     value={inputValue}
-                    onChange={(e)=>setInputValue(e.target.value)}
+                    onChange={(e)=>setInputValue(e.target.value.toUpperCase())}
                     placeholder="Digite o símbolo da moeda: BTC..." />
                 <button
                     type="submit"
